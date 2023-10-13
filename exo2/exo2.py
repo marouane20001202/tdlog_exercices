@@ -28,3 +28,11 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+import unittest
+
+class Exo2Test(unittest.TestCase):
+
+    def test_text_construction(self):
+        for i in range (len(word[0])):
+             if not self.assertEqual(word[0][i:], word[1]):
+                 continue

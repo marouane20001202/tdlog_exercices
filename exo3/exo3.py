@@ -36,8 +36,18 @@ Sortie
 La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 """
+input_1 = open("sample/input1.txt")
+input_2 = open("sample/input2.txt")
+#lines = input_1.readlines()
 
+def processLines(lines):
 
-def processLines(lines) -> str:
-    # Implementer votre réponse ici
-    return "OK"
+    for line in lines[2:]:
+        line_separated = line.split()
+
+        lines[1] = int(lines[1]) - int(line_separated[0]) + int(line_separated[1])
+    if lines[1] == 0:
+        return "OK"
+    else:
+        return "KO"
+
